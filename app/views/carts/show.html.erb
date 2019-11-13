@@ -4,6 +4,7 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.length > 0 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -30,7 +31,7 @@
         </tr>
       </tfoot>
     </table>
-  </div>
+    </div>
 
   <div class="row">
     <div class="col-xs-12">
@@ -48,5 +49,10 @@
       <% end %>
     </div>
   </div>
+
+  <% else %>
+  <h4>No items yet!</h4>
+  <a href="/">Return to products page</a>
+  <% end %>
 
 </section>
