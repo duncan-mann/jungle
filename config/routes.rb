@@ -26,6 +26,7 @@ post '/users' => 'users#create'
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, :categories, except: [:edit, :update, :show]
+    resources :sales, only: [:index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
